@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject, EventEmitter, Output } from '@angular/core';
 import { FormGroup, FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
-import { AuthService } from '../services/auth.service';
+import { UserService } from '../services/user.service';
 import { OnInit } from '@angular/core';
 
 @Component({
@@ -12,16 +12,14 @@ import { OnInit } from '@angular/core';
   standalone: true
 })
 export class LoginComponent implements OnInit {
-  
-
-
 
   date: Date = new Date("2025-08-14");
   Prova: string = "Este texto deberia estar en mayusculas";
   formularioLogin: FormGroup;
-  authService = inject(AuthService);
+  userService = inject(UserService);
   @Output() loggedin = new EventEmitter<string>();
   @Output() exportLoggedIn = new EventEmitter<boolean>();
+  @Output() exportGoBack = new EventEmitter<boolean>();
 
   constructor(private form: FormBuilder){
     this.formularioLogin = this.form.group({
@@ -47,7 +45,7 @@ ngOnInit(): void {
 
     const loginData = this.formularioLogin.value;
 
-    this.authService.login(loginData).subscribe({
+    this.userService.loginUser(loginData).subscribe({
       next: (response) => {
         console.log('Login exitoso:', response);
         this.exportLoggedIn.emit(true);
@@ -58,5 +56,8 @@ ngOnInit(): void {
         alert('Error en el login, verifica tus credenciales');
       }
     });
+  }
+  goBack() {
+    this.exportGoBack.emit(false);
   }
 }

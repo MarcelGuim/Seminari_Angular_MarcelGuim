@@ -1,0 +1,14 @@
+.btn-primary {
+    display: flex;
+    justify-content: center; /* Centra horitzontalment */
+    align-items: center; /* Centra verticalment */
+    height: 40px; /* Exemple d'altura */
+    width: 150px; /* Exemple d'amplada */
+}
+.btn-primary2 {
+    display: flex;
+    justify-content: center; /* Centra horitzontalment */
+    align-items: center; /* Centra verticalment */
+    height: 40px; /* Exemple d'altura */
+    width: 150px; /* Exemple d'amplada */
+}

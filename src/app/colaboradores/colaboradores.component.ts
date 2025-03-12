@@ -47,6 +47,7 @@ export class ColaboradoresComponent {
 
   }
 
+
   trackByUserId(index: number, user: any): number {
     return user.id;
   }

@@ -1,9 +1,13 @@
-@if(loggedin)
+@if(loggedin2)
 {
     <app-usuario></app-usuario>
 }
-@else  {
-    <app-login (exportLoggedIn)="getLoggedIn($event)"></app-login>
+@else if (loggedin)  {
+    <app-login (exportLoggedIn)="getLoggedIn($event)"(exportGoBack)="getGoBack($event)"></app-login>
 }
-
+@else if (register){
+    <app-register (exportRegistered)="getRegistered($event)"(exportGoBack)="getGoBack($event)"></app-register>
+}
+<button (click)="setRegister()" class="btn btn-primary">Register</button>
+<button (click)="setLogin()" class="btn btn-primary2">Login</button>
 <router-outlet />
