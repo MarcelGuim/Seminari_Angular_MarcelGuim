@@ -35,8 +35,8 @@ export class RegisterComponent implements OnInit {
     this.formularioRegister = this.form.group({
       name: ['Marcel'],
       age: ['21'],
-      email: ['eve.holt@reqres.in', [Validators.required, Validators.email]], 
-      password: ['cityslicka', [Validators.required, Validators.minLength(8)]] 
+      email: ['marcel.guim@estudiantat.upc.edu', [Validators.required, Validators.email]], 
+      password: ['12345678', [Validators.required, Validators.minLength(8)]] 
     });
   }
   hasError(controlName:string, errorType:string){

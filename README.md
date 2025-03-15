@@ -1,3 +1,11 @@
+Fet copiant i modificant el codi dels altres components, i amb ajuda de ChatGPT per fer el html. També he demanat ajuda als companys de grup que han fet el seminari per tot el tema de com "enviar" valors de booleans d'un component a un d'altre
+
+
+Enllaç youtube:
+https://youtu.be/XSUUbAEkt5s
+
+
+
 # AngularSeminari6
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.

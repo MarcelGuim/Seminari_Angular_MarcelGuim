@@ -29,8 +29,8 @@ export class LoginComponent implements OnInit {
   }
 ngOnInit(): void {
     this.formularioLogin = this.form.group({
-      email: ['eve.holt@reqres.in', [Validators.required, Validators.email]], // Valor predeterminado para el email
-      password: ['cityslicka', [Validators.required, Validators.minLength(8)]] // Valor predeterminado para la contraseña
+      email: ['marcel.guim@estudiantat.upc.edu', [Validators.required, Validators.email]], // Valor predeterminado para el email
+      password: ['12345678', [Validators.required, Validators.minLength(8)]] // Valor predeterminado para la contraseña
     });
   }
   hasError(controlName:string, errorType:string){
